@@ -1,0 +1,111 @@
+<!--- Created by Adversary Mindset for Training Purposes Only --->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MyFace</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #4267B2;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .post {
+            border-bottom: 1px solid #ddd;
+            padding: 20px 0;
+        }
+
+        .post:last-child {
+            border-bottom: none;
+        }
+
+        .post h2 {
+            margin: 0 0 10px 0;
+        }
+
+        .post p {
+            margin: 0 0 10px 0;
+        }
+
+        .like-button {
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .like-button:hover {
+            background-color: #45a049;
+        }
+
+        .like-button.clicked {
+            background-color: #ccc;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 10px 20px;
+            background-color: #f0f0f0;
+            border-top: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Welcome to MyFace</h1>
+    </div>
+    <div class="container">
+        <div class="post">
+            <h2>Jane Smith</h2>
+            <p>Enjoying a beautiful day at the park!</p>
+            <span class="like-button" onclick="likePost(this)">Like</span>
+        </div>
+        <div class="post">
+            <h2>John Doe</h2>
+            <p>Just finished a great workout. Feeling fantastic!</p>
+            <span class="like-button" onclick="likePost(this)">Like</span>
+        </div>
+        <div class="post">
+            <h2>Mary Johnson</h2>
+            <p>Had an amazing dinner with friends last night. Highly recommend the new restaurant downtown!</p>
+            <span class="like-button" onclick="likePost(this)">Like</span>
+        </div>
+        <div class="post" id="target-post">
+            <h2>Chris Brown</h2>
+            <p>Loving the new features on MyFace! Keep them coming!</p>
+            <span class="like-button" onclick="likePost(this)">Like</span>
+        </div>
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 MyFace. All rights reserved.</p>
+    </div>
+
+    <script>
+        function likePost(button) {
+            button.classList.add('clicked');
+            alert('You liked the post!');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+Course Name: Clickjacking, Forced Like of a Social Media Post
+
+Infrastructure Requirements:
+    Windows/Mac/Linux
+    Python 3
+
+1. Set up Fake Social Media Page Web Server:
+    python server_myface.py
+        Server listens on http://127.0.0.1:8888
+
+2. Set up Click Jacking Web Server:
+    python server_hacker.py
+        Server listens on http://127.0.0.1:4444
+
+3. Access MyFace Fake Social Media Page:
+    http://127.0.0.1:8888/social-media.html
+
+4. Access ClickJacking Page:
+    http://127.0.0.1:4444/winner.html
+
+5. Access ClickJacking Page that Shows Hidden MyFace iFrame:
+    http://127.0.0.1:4444/winner_show.html
+
+6. On the "winner_show.html" page, if the "Claim" button lines up perfectly
+    with the "Like" button, great! The page is ready for testing.
+
+7. If the buttons do not line up for this example, resize the window until they match up.
+
+8. In a real world scenario, you would modify the following CSS style's "top" and "left"
+    fields until the buttons match up.
+
+    iframe {
+        position: absolute;
+        top: 120px;
+        left: 370px;
+        width: 100%;
+        height: 100%;
+        border: none;
+        opacity: .5;
+        z-index: 2;
+    }
